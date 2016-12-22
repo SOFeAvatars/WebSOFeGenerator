@@ -5,7 +5,7 @@ $g = $_GET['g'];
 $b = $_GET['b'];
 
 $img = imagecreatetruecolor(120, 120);
-$bg = imagecolorallocate($img, 255, 255, 255);
+$bg = imagecolorallocate($img, 237, 237, 237);
 $color = imagecolorallocate($img, $r, $g, $b);
 
 imagefill($img, 0, 0, $bg);
