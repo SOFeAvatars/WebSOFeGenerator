@@ -1,5 +1,7 @@
 <?php
 
+header("Content-type: image/png");
+
 $r = $_GET['r'];
 $g = $_GET['g'];
 $b = $_GET['b'];
