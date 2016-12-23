@@ -27,5 +27,7 @@ Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
 
 ### Install it on your webserver:
 1. Clone the repo to your webserver.
-2. Download and unzip http://jscolor.com into the same folder (you can delete the "jscolor-example.html" file).
-3. Have fun.
+2. Have fun.
+
+## Info:
+This projekt is using http://jscolor.com for the color-changer.
