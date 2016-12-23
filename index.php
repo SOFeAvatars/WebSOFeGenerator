@@ -1,16 +1,15 @@
-<?php
-echo '
+<script src="jscolor.js"></script>
+
 <form action="sofeavatar.php">
-  R:<br>
-  <input type="text" name="r" value="0">
-  <br>
-  G:<br>
-  <input type="text" name="g" value="0">
-  <br>
-  B:<br>
-  <input type="text" name="b" value="0">
-  <br>
-  <br>
-  <input type="submit" value="Submit">
-</form>  
-';
+    <p>
+        Avatar Color:
+        <input name="hex" class="jscolor" value="63d957">
+    </p>
+    
+    <p>
+        Background Color:
+        <input name="bghex" class="jscolor" value="eeeeee">
+    </p>
+    
+    <input type="submit">
+</form>
