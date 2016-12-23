@@ -7,10 +7,14 @@ Online SOFe Avatar Generator:
 Go to http://himbeer.me/sofeavatars and let your creativity free!
 
 ### Use the "API":
-Our Generator has an API with different argumnents:
+Our Generator has an API with different arguments:
 
 #### Usage:
 Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
+
+
+![An Example Image](http://himbeer.me/sofeavatars/sofeavatar.php?r=123&g=123&b=123)
+
 
 #### Argument list:
 
@@ -30,4 +34,4 @@ Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
 2. Have fun.
 
 ## Info:
-This projekt is using http://jscolor.com for the color-changer.
+This project is using http://jscolor.com for the color-changer.
