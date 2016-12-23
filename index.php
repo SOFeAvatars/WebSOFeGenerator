@@ -1,4 +1,4 @@
-<script src="jscolor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js" integrity="sha384-jgQsvNMr8zkb64e1g7aH9Yj/ZLpqINIFzdatFD7RgOak1XaPpfKVmNMCsVmPgTfJ" crossorigin="anonymous"></script>
 
 <form action="sofeavatar.php">
     <p>
