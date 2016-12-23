@@ -22,10 +22,14 @@ if(isset($_GET["hex"])){
   $rgb = array("r" => $_GET["r"], "g" => $_GET["g"], "b" => $_GET["b"]);
 }
 
-if(isset($_GET["bghex"])){
-  $bgcol = hexrgb($_GET["bghex"]);
+if(isset($_GET["bghex"]) or isset($_GET["bgr"]) or isset($_GET["bgg"]) or isset($_GET["bgb"])){
+  if(isset($_GET["bghex"])){
+    $bgcol = hexrgb($_GET["bghex"]);
+  }else{
+    $bgcol = array("r" => $_GET["bgr"], "g" => $_GET["bgg"], "b" => $_GET["bgb"]);
+  }
 }else{
-  $bgcol = array("r" => $_GET["bgr"], "g" => $_GET["bgg"], "b" => $_GET["bgb"]);
+  $bgcol = hexrgb("eeeeee");
 }
 
 $img = imagecreatetruecolor(120, 120);
