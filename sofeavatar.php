@@ -22,8 +22,14 @@ if(isset($_GET["hex"])){
   $rgb = array("r" => $_GET["r"], "g" => $_GET["g"], "b" => $_GET["b"]);
 }
 
+if(isset($_GET["bghex"])){
+  $bgcol = hexrgb($_GET["bghex"]);
+}else{
+  $bgcol = array("r" => $_GET["bgr"], "g" => $_GET["bgg"], "b" => $_GET["bgb"]);
+}
+
 $img = imagecreatetruecolor(120, 120);
-$bg = imagecolorallocate($img, 237, 237, 237);
+$bg = imagecolorallocate($img, $bgcol["r"], $bgcol["g"], $bgcol["b"]);
 $color = imagecolorallocate($img, $rgb["r"], $rgb["g"], $rgb["b"]);
 
 imagefill($img, 0, 0, $bg);
