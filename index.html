@@ -13,13 +13,15 @@
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js" integrity="sha384-jgQsvNMr8zkb64e1g7aH9Yj/ZLpqINIFzdatFD7RgOak1XaPpfKVmNMCsVmPgTfJ" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
       <div class="centered">
-        <img src="sofeavatar.php?hex=63d957" height="70" width="70">
+        <img name="avatar" src="sofeavatar.php?hex=63d957" height="70" width="70">
         <h1>SOFe Avatar Generator</h1>
         <form action="sofeavatar.php">
           <p>
@@ -37,5 +39,6 @@
       </div>
     </div>
   </div>
+  <script>run();</script>
 </body>
 </html>
