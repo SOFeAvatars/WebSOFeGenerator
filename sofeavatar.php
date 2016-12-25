@@ -3,17 +3,17 @@
 header("Content-type: image/png");
 
 function hexrgb($hex) {
-    $hex = str_replace("#", "", $hex);
-    if(strlen($hex) == 3) {
-      $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-      $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-      $b = hexdec(substr($hex,2,1).substr($hex,2,1));
-    } else {
-      $r = hexdec(substr($hex,0,2));
-      $g = hexdec(substr($hex,2,2));
-      $b = hexdec(substr($hex,4,2));
-    }
-    return array("r" => $r, "g" => $g, "b" => $b);
+  $hex = str_replace("#", "", $hex);
+  if(strlen($hex) == 3) {
+    $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+    $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+    $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+  } else {
+    $r = hexdec(substr($hex,0,2));
+    $g = hexdec(substr($hex,2,2));
+    $b = hexdec(substr($hex,4,2));
+  }
+  return array("r" => $r, "g" => $g, "b" => $b);
 }
 
 if(isset($_GET["hex"])){
@@ -45,8 +45,21 @@ imagefilledrectangle($img, 30, 70, 50, 90, $color);
 imagefilledrectangle($img, 70, 70, 90, 90, $color);
 
 imagefilledrectangle($img, 10, 90, 110, 110, $color);
+if(isset($_GET['rot'])) $rot = $_GET['rot']; else $rot = 0;
+if(ctype_digit($rot) AND $rot >= 0 AND $rot <= 3){
+  if ($rot == 1) $rot = 90;
+  if ($rot == 2) $rot = 180;
+  if ($rot == 3) $rot = 270;
+} else $rot = 0;
 
-imagepng($img);
+if ($rot == 0)
+  imagepng($img);
+elseif($rot >= 90 AND $rot <= 270){
+  $rotated = imagerotate($img, $rot, 0);
+  imagepng($rotated);
+  imagedestroy($rotated);
+}
+
 imagedestroy($img);
 
 ?>
