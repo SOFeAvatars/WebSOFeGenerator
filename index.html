@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
   <style>
-  .centered {text-align: center;}
+  .jumbotron {text-align: center;}
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js" integrity="sha384-jgQsvNMr8zkb64e1g7aH9Yj/ZLpqINIFzdatFD7RgOak1XaPpfKVmNMCsVmPgTfJ" crossorigin="anonymous"></script>
@@ -20,35 +20,34 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <div class="centered">
         <img name="avatar" src="sofeavatar.php?hex=63d957" height="70" width="70">
         <h1>SOFe Avatar Generator</h1>
         <form action="sofeavatar.php">
-          <p>
-            Avatar Color:
-            <input name="hex" class="jscolor" value="63d957">
-          </p>
+          <div class="form-group">
+            <label for="color">Avatar Color:</label>
+            <input id="color" name="hex" class="jscolor" class="form-control" value="63d957">
+          </div>
           
-          <p>
-            Background Color:
-            <input name="bghex" class="jscolor" value="eeeeee">
-          </p>
-
+          <div class="form-group">
+            <label for="bgcolor">Background Color:</label>
+            <input id="bgcolor" name="bghex" class="jscolor" class="form-control" value="eeeeee">
+          </div>
+          
+          <div class="form-group">
+            <label for="rotation">Rotation (in degrees):</label>
             <p>
-                Rotation:<br>
-                WIP NOTE: auto update dose not work on rotation for now<br>
-                <select name="rot">
-                    <option value="0">0</option>
-                    <option value="1">90</option>
-                    <option value="2">180</option>
-                    <option value="3">270</option>
-                </select>
-
+              <select id="rotation" name="rot">
+                <option value="0">None</option>
+                <option value="90">90&deg;</option>
+                <option value="180">180&deg;</option>
+                <option value="270">270&deg;</option>
+              </select>
             </p>
-
-          <input class="btn btn-primary" type="submit" value="View">
+            <small id="rotationHelp" class="form-text text-muted">WIP-NOTE: Auto-Update does not work on rotation for now.</small>
+          </div>
+          
+          <input class="btn btn-primary" type="submit" value="Generate">
         </form>
-      </div>
     </div>
   </div>
   <script>run();</script>
