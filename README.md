@@ -23,11 +23,13 @@ Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
 * r → The RGB value of red.
 * g → The RGB value of green.
 * b → The RGB value of blue.
+
 ##### Background (optional):
 * bghex → Hexadecimal color value, this will override the bgr, bgg, and bgb arguments.
 * bgr → The RGB value of red.
 * bgg → The RGB value of green.
 * bgb → The RGB value of blue.
+
 ##### Rotation (optional):
 * rot → The rotation (expects 0, 1(90), 2(180), 3(270))
 
