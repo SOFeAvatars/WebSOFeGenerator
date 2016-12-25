@@ -28,6 +28,8 @@ Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
 * bgr → The RGB value of red.
 * bgg → The RGB value of green.
 * bgb → The RGB value of blue.
+##### Rotation (optional):
+* rot → The rotation (expects 0, 1(90), 2(180), 3(270))
 
 ### Install it on your webserver:
 1. Clone the repo to your webserver.
