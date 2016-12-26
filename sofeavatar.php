@@ -1,8 +1,13 @@
 <?php
-
-header('Set-Cookie: fileDownload=true; path=/');
 header("Content-type: image/png");
-header('Content-Disposition: attachment; filename="'.$_GET["hex"].'_'.$_GET["bghex"].'_'.$_GET['rot'].'.png"');
+if (isset($_GET['dodownload']) OR isset($_GET['doDownload'])) $_GET['download'] = "true";
+if(isset($_GET['download'])) {
+  $download = strtolower($_GET['download']);
+  if ($download== "1" OR $download == "true" OR $download == "do"){
+    header('Set-Cookie: fileDownload=true; path=/');
+    header('Content-Disposition: attachment; filename="sofe_'.$_GET["hex"].'_'.$_GET["bghex"].'_'.$_GET['rot'].'.png"');
+  }
+}
 
 function hexrgb($hex) {
   $hex = str_replace("#", "", $hex);

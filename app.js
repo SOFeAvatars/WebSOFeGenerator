@@ -4,6 +4,6 @@ function run() {
 	});
 
 	$("#download").click(function() {
-		$.fileDownload("sofeavatar.php?hex=" + $("#color").val() + "&bghex=" + $("#bgcolor").val() + "&rot=" + $("#rotation").val());
+		$.fileDownload("sofeavatar.php?hex=" + $("#color").val() + "&bghex=" + $("#bgcolor").val() + "&rot=" + $("#rotation").val()+"&dodownload");
 	});
 }
