@@ -1,10 +1,5 @@
 <?php
 
-if( empty($_GET["hex"]) || empty($_GET["bghex"]) ) {
-  echo "Error";
-  return 0;
-}
-
 header('Set-Cookie: fileDownload=true; path=/');
 header("Content-type: image/png");
 header('Content-Disposition: attachment; filename="'.$_GET["hex"].'_'.$_GET["bghex"].'_'.$_GET['rot'].'.png"');
