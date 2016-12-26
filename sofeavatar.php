@@ -39,19 +39,21 @@ if(isset($_GET["bghex"]) or isset($_GET["bgr"]) or isset($_GET["bgg"]) or isset(
   $bgcol = hexrgb("eeeeee");
 }
 
-$img = imagecreatetruecolor(120, 120);
+$img = imagecreatetruecolor(460, 460);
 $bg = imagecolorallocate($img, $bgcol["r"], $bgcol["g"], $bgcol["b"]);
 $color = imagecolorallocate($img, $rgb["r"], $rgb["g"], $rgb["b"]);
 
 imagefill($img, 0, 0, $bg);
 
-imagefilledrectangle($img, 10, 10, 50, 50, $color);
-imagefilledrectangle($img, 70, 10, 110, 50, $color);
+imagefilledrectangle($img, 39, 39, 191, 191, $color);
 
-imagefilledrectangle($img, 30, 70, 50, 90, $color);
-imagefilledrectangle($img, 70, 70, 90, 90, $color);
+imagefilledrectangle($img, 269, 39, 421, 191, $color);
 
-imagefilledrectangle($img, 10, 90, 110, 110, $color);
+imagefilledrectangle($img, 115, 269, 191, 344, $color);
+imagefilledrectangle($img, 269, 269, 345, 344, $color);
+
+imagefilledrectangle($img, 38, 345, 421, 421, $color);
+
 if(isset($_GET['rot'])) $rot = $_GET['rot']; else $rot = 0;
 if(!ctype_digit($rot)) $rot = 0;
 
