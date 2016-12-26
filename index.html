@@ -14,39 +14,38 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.js" integrity="sha384-jgQsvNMr8zkb64e1g7aH9Yj/ZLpqINIFzdatFD7RgOak1XaPpfKVmNMCsVmPgTfJ" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.fileDownload/1.4.2/jquery.fileDownload.min.js" integrity="sha384-YmpM7MVhBcXa3bp2eRZmiEhWSWyYcUqhAXwZt5LSnw1XB6uCXAYelFTKtOvCo1+T" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
-        <img name="avatar" src="sofeavatar.php?hex=63d957" height="70" width="70">
-        <h1>SOFe Avatar Generator</h1>
-        <form action="sofeavatar.php">
-          <div class="form-group">
-            <label for="color">Avatar Color:</label>
-            <input id="color" name="hex" class="jscolor" class="form-control" value="63d957">
-          </div>
-          
-          <div class="form-group">
-            <label for="bgcolor">Background Color:</label>
-            <input id="bgcolor" name="bghex" class="jscolor" class="form-control" value="eeeeee">
-          </div>
-          
-          <div class="form-group">
-            <label for="rotation">Rotation (in degrees):</label>
-            <p>
-              <select id="rotation" name="rot">
-                <option value="0">None</option>
-                <option value="90">90&deg;</option>
-                <option value="180">180&deg;</option>
-                <option value="270">270&deg;</option>
-              </select>
-            </p>
-          </div>
-          
-          <input class="btn btn-primary" type="submit" value="Generate">
-        </form>
+      <img name="avatar" src="sofeavatar.php?hex=63d957&bghex=EEEEEE&rot=0" height="70" width="70">
+      <h1>SOFe Avatar Generator</h1>
+        <div class="form-group">
+          <label for="color">Avatar Color:</label>
+          <input id="color" name="hex" class="jscolor" class="form-control" value="63d957">
+        </div>
+        
+        <div class="form-group">
+          <label for="bgcolor">Background Color:</label>
+          <input id="bgcolor" name="bghex" class="jscolor" class="form-control" value="eeeeee">
+        </div>
+        
+        <div class="form-group">
+          <label for="rotation">Rotation (in degrees):</label>
+          <p>
+            <select id="rotation" name="rot">
+              <option value="0">None</option>
+              <option value="90">90&deg;</option>
+              <option value="180">180&deg;</option>
+              <option value="270">270&deg;</option>
+            </select>
+          </p>
+        </div>
+        
+        <input id="download" class="btn btn-primary" type="submit" value="Download">
     </div>
   </div>
   <script>run();</script>
