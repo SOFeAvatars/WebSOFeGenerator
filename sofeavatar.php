@@ -48,17 +48,11 @@ imagefilledrectangle($img, 70, 70, 90, 90, $color);
 
 imagefilledrectangle($img, 10, 90, 110, 110, $color);
 if(isset($_GET['rot'])) $rot = $_GET['rot']; else $rot = 0;
-if(ctype_digit($rot) AND $rot >= 0 AND $rot <= 270){
-  if ($rot == 1 OR $rot == 90) $rot = 90;
-  elseif ($rot == 2 OR $rot == 180) $rot = 180;
-  elseif ($rot == 3 OR $rot == 270) $rot = 270;
-  else $rot = 0;
-} else $rot = 0;
+if(!ctype_digit($rot)) $rot = 0;
 
-if ($rot == 0)
-  imagepng($img);
-elseif($rot >= 90 AND $rot <= 270){
-  $rotated = imagerotate($img, $rot, 0);
+if ($rot == 0) imagepng($img);
+else {
+  $rotated = imagerotate($img, $rot, $bg);
   imagepng($rotated);
   imagedestroy($rotated);
 }
