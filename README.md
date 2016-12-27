@@ -30,8 +30,9 @@ Use them like this http://himbeer.me/sofeavatars?r=123&g=123&b=123
 * bgg → The RGB value of green.
 * bgb → The RGB value of blue.
 
-##### Rotation (optional):
-* rot → The rotation (expects 0, 1 or 90, 2 or 180, 3 or 270)
+##### others (optional):
+* rot → The rotation of the image
+* download → setting the paramater to 1 will attempt to make the browser download the image using doDownload paramater with no flags do the same
 
 ### Install it on your webserver:
 1. Clone the repo to your webserver.
